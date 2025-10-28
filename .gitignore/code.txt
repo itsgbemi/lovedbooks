@@ -171,6 +171,7 @@ color:var(--neutral-color);
 display:flex;
 flex-direction:column;
 align-items:center;
+position:relative;
 }
 .hi-reader{
 font-size:11px;
@@ -182,6 +183,9 @@ color:var(--neutral-color);
 text-decoration:none;
 font-weight:bold;
 font-size:14px;
+display:flex;
+align-items:center;
+gap:5px;
 }
 .login-link:hover{
 text-decoration:underline;
@@ -236,6 +240,11 @@ text-decoration:underline;
 }
 .dropdown:hover .dropdown-content{
 display:block;
+}
+.login-section .dropdown-content{
+left:auto;
+right:0;
+min-width:180px;
 }
 .see-all-books{
 color:var(--primary-color);
@@ -329,14 +338,15 @@ cursor:pointer;
 .mobile-nav{
 display:flex;
 flex-direction:column;
-gap:20px;
+gap:0;
 }
 .mobile-nav a{
 color:#333;
 text-decoration:none;
-font-size:18px;
-padding:10px 0;
+font-size:16px;
+padding:12px 0;
 border-bottom:1px solid #eee;
+display:block;
 }
 .mobile-nav a:hover{
 text-decoration:underline;
@@ -442,7 +452,7 @@ overflow:hidden;
 .feature-card{
 background:var(--primary-color);
 color:white;
-padding:30px;
+padding:20px;
 text-align:left;
 border-right:1px solid rgba(255,255,255,0.3);
 }
@@ -450,12 +460,13 @@ border-right:1px solid rgba(255,255,255,0.3);
 border-right:none;
 }
 .feature-card h3{
-margin-bottom:15px;
+margin-bottom:8px;
 font-size:1.4rem;
 }
 .feature-card p{
 opacity:0.9;
-line-height:1.5;
+line-height:1.4;
+font-size:0.9rem;
 }
 .section-title{
 font-size:1.5rem;
@@ -804,6 +815,7 @@ border-bottom:1px solid rgba(255,255,255,0.3);
 box-shadow:0 2px 4px rgba(0,0,0,0.1);
 border-radius:8px;
 margin-bottom:15px;
+padding:15px;
 }
 .feature-card:last-child{
 border-bottom:none;
@@ -811,6 +823,13 @@ margin-bottom:0;
 }
 .feature-card:first-child{
 background:var(--secondary-color);
+}
+.feature-card h3{
+margin-bottom:5px;
+font-size:1.2rem;
+}
+.feature-card p{
+font-size:0.85rem;
 }
 .books-grid{
 grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
@@ -864,6 +883,9 @@ background:var(--footer-bottom);
 }
 .footer-bottom{
 background:var(--footer-bottom);
+}
+.mobile-menu{
+display:block;
 }
 }
 
@@ -979,6 +1001,7 @@ import { useState } from 'react'
 
 export default function Header() {
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+const [loginDropdownOpen, setLoginDropdownOpen] = useState(false)
 
 const SearchIcon = () => (
 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -1042,9 +1065,20 @@ return (
 <HeartIcon />
 <span>Wishlist</span>
 </a>
-<div className="login-section">
+<div className="login-section dropdown">
 <div className="hi-reader">Hi Reader</div>
-<a href="#" className="login-link">Log In</a>
+<a href="#" className="login-link" onClick={(e) => { e.preventDefault(); setLoginDropdownOpen(!loginDropdownOpen); }}>
+Log In <ChevronDownIcon />
+</a>
+{loginDropdownOpen && (
+<div className="dropdown-content">
+<a href="#">Log In</a>
+<a href="#">Create Account</a>
+<a href="#">My Orders</a>
+<a href="#">Wishlist</a>
+<a href="#">Account Settings</a>
+</div>
+)}
 </div>
 <a href="#" className="header-action-item">
 <ListIcon />
@@ -1124,13 +1158,20 @@ return (
 </button>
 </div>
 <nav className="mobile-nav">
+<a href="#">Log In</a>
+<a href="#">Create Account</a>
 <a href="#">Gift Guides</a>
+<a href="#">Recommendations</a>
 <a href="#">Featured</a>
 <a href="#">Books</a>
 <a href="#">Deals</a>
 <a href="#">Collectible Books</a>
+<a href="#">DVD & Blu-ray</a>
+<a href="#">Offers</a>
 <a href="#">e-Gift Cards</a>
-<a href="#">See All Books</a>
+<a href="#">Sell Your Books</a>
+<a href="#">My Account</a>
+<a href="#">Tell-a-Friend</a>
 </nav>
 </div>
 )}
