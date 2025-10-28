@@ -296,6 +296,11 @@ overflow:hidden;
 box-shadow:0 4px 6px rgba(0,0,0,0.1);
 display:flex;
 flex-direction:column;
+text-decoration:none;
+}
+.main-promo:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 12px rgba(0,0,0,0.15);
 }
 .main-promo-image{
 height:300px;
@@ -328,6 +333,11 @@ overflow:hidden;
 box-shadow:0 4px 6px rgba(0,0,0,0.1);
 display:flex;
 flex-direction:column;
+text-decoration:none;
+}
+.side-promo:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 12px rgba(0,0,0,0.15);
 }
 .side-promo-image{
 height:120px;
@@ -415,14 +425,8 @@ transform:translateY(-5px);
 .book-image{
 width:100%;
 height:250px;
-background-color:#ddd;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#666;
-font-size:0.9rem;
-background:linear-gradient(45deg,var(--primary-color),var(--secondary-color));
-color:white;
+background-size:cover;
+background-position:center;
 }
 .book-info{
 padding:15px;
@@ -919,28 +923,28 @@ background:var(--footer-bottom);
 </div>
 <div class="container">
 <div class="promo-section">
-<div class="main-promo">
+<a href="/deals/holiday-jumpstart" class="main-promo">
 <div class="main-promo-image"></div>
 <div class="main-promo-content">
 <h1>Holiday Jumpstart</h1>
 <p>Get 100 bonus points with 4+ books</p>
 </div>
-</div>
+</a>
 <div class="side-promos">
-<div class="side-promo">
+<a href="/deals/kids-book-fair" class="side-promo">
 <div class="side-promo-image side-promo-image-1"></div>
 <div class="side-promo-content">
 <h3>Kids' Book Fair</h3>
 <p>Get the promo code</p>
 </div>
-</div>
-<div class="side-promo">
+</a>
+<a href="/deals/indie-next" class="side-promo">
 <div class="side-promo-image side-promo-image-2"></div>
 <div class="side-promo-content">
 <h3>Indie Next</h3>
 <p>Shop new best sellers</p>
 </div>
-</div>
+</a>
 </div>
 </div>
 <div class="features">
@@ -961,7 +965,7 @@ background:var(--footer-bottom);
 <div class="horizontal-scroll">
 <div class="scroll-item">
 <div class="book-card">
-<div class="book-image">Book Cover</div>
+<div class="book-image" style="background-image:url('https://res.cloudinary.com/dqhawdcol/image/upload/v1761640628/tse7iox1uvvvb9txshq9.jpg')"></div>
 <div class="book-info">
 <div class="book-title">The Hobbit</div>
 <div class="book-author">J.R.R. Tolkien</div>
@@ -971,7 +975,7 @@ background:var(--footer-bottom);
 </div>
 <div class="scroll-item">
 <div class="book-card">
-<div class="book-image">Book Cover</div>
+<div class="book-image" style="background-image:url('https://res.cloudinary.com/dqhawdcol/image/upload/v1761641455/ekeuarcoiun6gocactrs.jpg')"></div>
 <div class="book-info">
 <div class="book-title">Little Women</div>
 <div class="book-author">Louisa May Alcott</div>
@@ -981,7 +985,7 @@ background:var(--footer-bottom);
 </div>
 <div class="scroll-item">
 <div class="book-card">
-<div class="book-image">Book Cover</div>
+<div class="book-image" style="background-image:url('https://res.cloudinary.com/dqhawdcol/image/upload/v1761640628/tse7iox1uvvvb9txshq9.jpg')"></div>
 <div class="book-info">
 <div class="book-title">Crime and Punishment</div>
 <div class="book-author">Fyodor Dostoevsky</div>
@@ -991,7 +995,7 @@ background:var(--footer-bottom);
 </div>
 <div class="scroll-item">
 <div class="book-card">
-<div class="book-image">Book Cover</div>
+<div class="book-image" style="background-image:url('https://res.cloudinary.com/dqhawdcol/image/upload/v1761641455/ekeuarcoiun6gocactrs.jpg')"></div>
 <div class="book-info">
 <div class="book-title">Sharp Objects</div>
 <div class="book-author">Gillian Flynn</div>
@@ -1001,26 +1005,26 @@ background:var(--footer-bottom);
 </div>
 </div>
 <div class="mobile-promos">
-<div class="side-promo">
+<a href="/deals/kids-book-fair" class="side-promo">
 <div class="side-promo-image side-promo-image-1"></div>
 <div class="side-promo-content">
 <h3>Kids' Book Fair</h3>
 <p>Get the promo code</p>
 </div>
-</div>
-<div class="side-promo">
+</a>
+<a href="/deals/indie-next" class="side-promo">
 <div class="side-promo-image side-promo-image-2"></div>
 <div class="side-promo-content">
 <h3>Indie Next</h3>
 <p>Shop new best sellers</p>
 </div>
-</div>
+</a>
 </div>
 <h2 class="section-title">New & Trending</h2>
 <div class="horizontal-scroll">
 <div class="scroll-item">
 <div class="book-card">
-<div class="book-image">Book Cover</div>
+<div class="book-image" style="background-image:url('https://res.cloudinary.com/dqhawdcol/image/upload/v1761641455/ekeuarcoiun6gocactrs.jpg')"></div>
 <div class="book-info">
 <div class="book-title">How to Test Negative for Stupid</div>
 <div class="book-author">John Kennedy</div>
@@ -1030,7 +1034,7 @@ background:var(--footer-bottom);
 </div>
 <div class="scroll-item">
 <div class="book-card">
-<div class="book-image">Book Cover</div>
+<div class="book-image" style="background-image:url('https://res.cloudinary.com/dqhawdcol/image/upload/v1761640628/tse7iox1uvvvb9txshq9.jpg')"></div>
 <div class="book-info">
 <div class="book-title">Nobody's Girl</div>
 <div class="book-author">Virginia Roberts Guifre</div>
@@ -1040,7 +1044,7 @@ background:var(--footer-bottom);
 </div>
 <div class="scroll-item">
 <div class="book-card">
-<div class="book-image">Book Cover</div>
+<div class="book-image" style="background-image:url('https://res.cloudinary.com/dqhawdcol/image/upload/v1761641455/ekeuarcoiun6gocactrs.jpg')"></div>
 <div class="book-info">
 <div class="book-title">Alchemised</div>
 <div class="book-author">Seq LinVu</div>
@@ -1050,7 +1054,7 @@ background:var(--footer-bottom);
 </div>
 <div class="scroll-item">
 <div class="book-card">
-<div class="book-image">Book Cover</div>
+<div class="book-image" style="background-image:url('https://res.cloudinary.com/dqhawdcol/image/upload/v1761640628/tse7iox1uvvvb9txshq9.jpg')"></div>
 <div class="book-info">
 <div class="book-title">Partypooper</div>
 <div class="book-author">Jeff Kinney</div>
@@ -1062,7 +1066,7 @@ background:var(--footer-bottom);
 <h2 class="section-title">LovedBooks Deals</h2>
 <div class="books-grid">
 <div class="book-card">
-<div class="book-image">Book Cover</div>
+<div class="book-image" style="background-image:url('https://res.cloudinary.com/dqhawdcol/image/upload/v1761640628/tse7iox1uvvvb9txshq9.jpg')"></div>
 <div class="book-info">
 <div class="book-title">Night</div>
 <div class="book-author">Elie Wiesel</div>
@@ -1070,7 +1074,7 @@ background:var(--footer-bottom);
 </div>
 </div>
 <div class="book-card">
-<div class="book-image">Book Cover</div>
+<div class="book-image" style="background-image:url('https://res.cloudinary.com/dqhawdcol/image/upload/v1761641455/ekeuarcoiun6gocactrs.jpg')"></div>
 <div class="book-info">
 <div class="book-title">The Grapes of Wrath</div>
 <div class="book-author">John Steinbeck</div>
@@ -1078,7 +1082,7 @@ background:var(--footer-bottom);
 </div>
 </div>
 <div class="book-card">
-<div class="book-image">Book Cover</div>
+<div class="book-image" style="background-image:url('https://res.cloudinary.com/dqhawdcol/image/upload/v1761640628/tse7iox1uvvvb9txshq9.jpg')"></div>
 <div class="book-info">
 <div class="book-title">Matilda</div>
 <div class="book-author">Roald Dahl</div>
@@ -1086,7 +1090,7 @@ background:var(--footer-bottom);
 </div>
 </div>
 <div class="book-card">
-<div class="book-image">Book Cover</div>
+<div class="book-image" style="background-image:url('https://res.cloudinary.com/dqhawdcol/image/upload/v1761641455/ekeuarcoiun6gocactrs.jpg')"></div>
 <div class="book-info">
 <div class="book-title">Redeeming Love</div>
 <div class="book-author">Francine Rivers</div>
@@ -1094,7 +1098,7 @@ background:var(--footer-bottom);
 </div>
 </div>
 <div class="book-card">
-<div class="book-image">Book Cover</div>
+<div class="book-image" style="background-image:url('https://res.cloudinary.com/dqhawdcol/image/upload/v1761640628/tse7iox1uvvvb9txshq9.jpg')"></div>
 <div class="book-info">
 <div class="book-title">The Hate U Give</div>
 <div class="book-author">Angie Thomas</div>
@@ -1102,7 +1106,7 @@ background:var(--footer-bottom);
 </div>
 </div>
 <div class="book-card">
-<div class="book-image">Book Cover</div>
+<div class="book-image" style="background-image:url('https://res.cloudinary.com/dqhawdcol/image/upload/v1761641455/ekeuarcoiun6gocactrs.jpg')"></div>
 <div class="book-info">
 <div class="book-title">A Tale of Two Cities</div>
 <div class="book-author">Charles Dickens</div>
@@ -1295,7 +1299,7 @@ LovedBooks sells millions of used books at the lowest everyday prices. We person
 <a href="#">Accessibility Statement</a>
 </div>
 <div class="copyright">
-Copyright © 2025 Lovedbooks.com<br>
+Copyright © <span id="currentYear"></span> Lovedbooks.com<br>
 LovedBooks® and the LovedBooks® logo are registered trademarks of Loved Books Global, LLC.
 </div>
 </div>
@@ -1316,6 +1320,7 @@ if(e.target===mobileMenu){
 mobileMenu.style.display='none';
 }
 });
+document.getElementById('currentYear').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
