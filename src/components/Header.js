@@ -3,6 +3,7 @@ import { useState } from 'react'
 
 export default function Header() {
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+const [loginDropdownOpen, setLoginDropdownOpen] = useState(false)
 
 const SearchIcon = () => (
 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -66,9 +67,20 @@ return (
 <HeartIcon />
 <span>Wishlist</span>
 </a>
-<div className="login-section">
+<div className="login-section dropdown">
 <div className="hi-reader">Hi Reader</div>
-<a href="#" className="login-link">Log In</a>
+<a href="#" className="login-link" onClick={(e) => { e.preventDefault(); setLoginDropdownOpen(!loginDropdownOpen); }}>
+Log In <ChevronDownIcon />
+</a>
+{loginDropdownOpen && (
+<div className="dropdown-content">
+<a href="#">Log In</a>
+<a href="#">Create Account</a>
+<a href="#">My Orders</a>
+<a href="#">Wishlist</a>
+<a href="#">Account Settings</a>
+</div>
+)}
 </div>
 <a href="#" className="header-action-item">
 <ListIcon />
@@ -148,13 +160,20 @@ return (
 </button>
 </div>
 <nav className="mobile-nav">
+<a href="#">Log In</a>
+<a href="#">Create Account</a>
 <a href="#">Gift Guides</a>
+<a href="#">Recommendations</a>
 <a href="#">Featured</a>
 <a href="#">Books</a>
 <a href="#">Deals</a>
 <a href="#">Collectible Books</a>
+<a href="#">DVD & Blu-ray</a>
+<a href="#">Offers</a>
 <a href="#">e-Gift Cards</a>
-<a href="#">See All Books</a>
+<a href="#">Sell Your Books</a>
+<a href="#">My Account</a>
+<a href="#">Tell-a-Friend</a>
 </nav>
 </div>
 )}
